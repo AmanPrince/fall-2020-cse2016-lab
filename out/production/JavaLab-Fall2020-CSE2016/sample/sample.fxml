@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <CheckBox fx:id="cb_option1" layoutX="24.0" layoutY="35.0" mnemonicParsing="false" text="Option1" />
+      <CheckBox fx:id="cb_option2" layoutX="24.0" layoutY="68.0" mnemonicParsing="false" text="Option2" />
+      <CheckBox fx:id="cb_option3" layoutX="24.0" layoutY="104.0" mnemonicParsing="false" text="Option3" />
+      <CheckBox fx:id="cb_option4" layoutX="24.0" layoutY="143.0" mnemonicParsing="false" text="Option4" />
+      <Button fx:id="btn_click_me" layoutX="30.0" layoutY="187.0" mnemonicParsing="false" onAction="#doPerformCheckBox" text="Click Me" />
+      <RadioButton fx:id="rb_1" layoutX="176.0" layoutY="35.0" mnemonicParsing="false" text="RadioButton1" />
+      <RadioButton fx:id="rb_2" layoutX="176.0" layoutY="68.0" mnemonicParsing="false" text="RadioButton2" />
+      <RadioButton fx:id="rb_3" layoutX="176.0" layoutY="104.0" mnemonicParsing="false" text="RadioButton3" />
+      <RadioButton fx:id="rb_4" layoutX="176.0" layoutY="143.0" mnemonicParsing="false" text="RadioButton4" />
+      <ComboBox fx:id="cb_gender" layoutX="327.0" layoutY="91.0" prefWidth="150.0" />
+      <ListView fx:id="listView" layoutX="327.0" layoutY="152.0" prefHeight="221.0" prefWidth="248.0" />
+   </children>
+</AnchorPane>
