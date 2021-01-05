@@ -9,6 +9,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import sample.db_access.DBConnectionImpl;
+import sample.utils.CommonTask;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -106,6 +107,9 @@ public class RegistrationController implements Initializable, EventHandler<Actio
 
             // close connection
             dbConnection.closeConnection(connection);
+
+            // back to the login page
+            CommonTask.getInstance().navigationTo("/sample/fxmls/login.fxml");
         }catch (Exception ex){
             ex.printStackTrace();
         }

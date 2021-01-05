@@ -8,9 +8,16 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    private static Stage stage;
+
+    public static Stage getStage(){
+        return stage;
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxmls.login.fxml"));
+        stage = primaryStage;
+        Parent root = FXMLLoader.load(getClass().getResource("/sample/fxmls/login.fxml"));
         primaryStage.setTitle("Pre-Registration Apps");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
