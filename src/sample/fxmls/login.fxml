@@ -16,9 +16,9 @@
          </font>
       </Label>
       <Label layoutX="38.0" layoutY="126.0" text="Student ID" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="130.0" />
-      <TextField layoutX="107.0" layoutY="125.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="125.0" />
+      <TextField fx:id="tf_student_id" layoutX="107.0" layoutY="125.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="125.0" />
       <Label layoutX="40.0" layoutY="183.0" text="Password" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="180.0" />
-      <PasswordField layoutX="110.0" layoutY="175.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="175.0" />
+      <PasswordField fx:id="pf_student_pass" layoutX="110.0" layoutY="175.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="175.0" />
       <Button layoutX="525.0" layoutY="225.0" mnemonicParsing="false" onAction="#doLogin" text="Login" AnchorPane.rightAnchor="20.0" />
       <Hyperlink alignment="CENTER" layoutX="269.0" layoutY="326.0" text="Create an account?" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" onAction="#goToRegistrationPage" />
    </children>

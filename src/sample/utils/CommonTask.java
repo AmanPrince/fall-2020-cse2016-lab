@@ -3,6 +3,7 @@ package sample.utils;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import sample.Main;
 
 
@@ -21,6 +22,13 @@ public class CommonTask {
         }catch (Exception ex){
             ex.printStackTrace();
         }
+    }
+
+    public void showMessage(Alert.AlertType type, String msg){
+        Alert alert = new Alert(type);
+        alert.setTitle("Registration");
+        alert.setContentText(msg);
+        alert.show();
     }
 
     public static CommonTask getInstance(){

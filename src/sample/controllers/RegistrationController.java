@@ -4,10 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import sample.db_access.DBConnectionImpl;
 import sample.utils.CommonTask;
 
@@ -25,9 +22,10 @@ public class RegistrationController implements Initializable, EventHandler<Actio
     public PasswordField tf_password;
     public ComboBox cb_status;
     public TextArea ta_address;
-    private String status;
+    private String status="";
 
     private DBConnectionImpl dbConnection;
+    private Connection connection;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -54,33 +52,42 @@ public class RegistrationController implements Initializable, EventHandler<Actio
 
             // validation check
             if(full_name.isEmpty()){
-                System.out.println("Full name cannot be empty");
+                CommonTask.getInstance().showMessage(Alert.AlertType.ERROR,"Full name cannot be empty!!");
                 return;
             }
             if(student_id.isEmpty()){
-                System.out.println("Student`s id cannot be empty");
+                CommonTask.getInstance().showMessage(Alert.AlertType.ERROR,"ID cannot be empty!!");
                 return;
             }
             if(batch.isEmpty()){
-                System.out.println("Student`s batch cannot be empty");
+                CommonTask.getInstance().showMessage(Alert.AlertType.ERROR,"Batch cannot be empty!!");
                 return;
             }
             if(dept.isEmpty()){
-                System.out.println("Student`s department cannot be empty");
+                CommonTask.getInstance().showMessage(Alert.AlertType.ERROR,"Department cannot be empty!!");
                 return;
             }
             if(pass.isEmpty()){
-                System.out.println("Password cannot be empty. Minimum length 8 character.");
+                CommonTask.getInstance().showMessage(Alert.AlertType.ERROR,"Password cannot be empty!!");
                 return;
             }
             if(address.isEmpty()){
-                System.out.println("Address cannot be empty");
+                CommonTask.getInstance().showMessage(Alert.AlertType.ERROR,"Address cannot be empty!!");
+                return;
+            }
+            if(status.isEmpty()){
+                CommonTask.getInstance().showMessage(Alert.AlertType.ERROR,"Status cannot be empty!!");
                 return;
             }
 
 
             // db connection
-            Connection connection = dbConnection.openConnection();
+            connection = dbConnection.openConnection();
+
+            if(connection==null){
+                CommonTask.getInstance().showMessage(Alert.AlertType.ERROR,"Cannot connect with database!");
+                return;
+            }
 
             // save data into database
             String sql = "INSERT INTO student(name, dept, batch, s_id, password, address, status) VALUES(?,?,?,?,?,?,?)";
@@ -100,18 +107,20 @@ public class RegistrationController implements Initializable, EventHandler<Actio
             int result = statement.executeUpdate();
 
             if(result>0){
-                System.out.println("Data successfully save");
+                CommonTask.getInstance().showMessage(Alert.AlertType.CONFIRMATION,"Registration completed!!");
+                // back to the login page
+                CommonTask.getInstance().navigationTo("/sample/fxmls/login.fxml");
             }else{
-                System.out.println("Data failed to add into database");
+                CommonTask.getInstance().showMessage(Alert.AlertType.ERROR,"Registration failed! Please try again.");
             }
 
-            // close connection
-            dbConnection.closeConnection(connection);
 
-            // back to the login page
-            CommonTask.getInstance().navigationTo("/sample/fxmls/login.fxml");
         }catch (Exception ex){
             ex.printStackTrace();
+        }finally {
+            if(connection != null){
+                dbConnection.closeConnection(connection);
+            }
         }
     }
 
