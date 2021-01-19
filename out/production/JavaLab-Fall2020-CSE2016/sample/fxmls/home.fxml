@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.HomeController">
    <children>
       <TabPane layoutX="32.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
@@ -20,18 +20,19 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TextField layoutX="14.0" layoutY="14.0" promptText="Course Code" />
-                        <TextField layoutX="189.0" layoutY="14.0" promptText="Course Title" />
-                        <ComboBox layoutX="14.0" layoutY="51.0" prefHeight="27.0" prefWidth="160.0" />
-                        <ComboBox layoutX="189.0" layoutY="51.0" prefHeight="27.0" prefWidth="161.0" />
-                        <Button layoutX="397.0" layoutY="14.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="98.0" text="Add Course" />
-                        <TableView layoutX="14.0" layoutY="97.0" prefHeight="266.0" prefWidth="580.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0">
+                        <TextField fx:id="tf_course_code" layoutX="14.0" layoutY="14.0" promptText="Course Code" />
+                        <TextField fx:id="tf_course_title" layoutX="189.0" layoutY="14.0" promptText="Course Title" />
+                        <ComboBox fx:id="cb_credit_hour" layoutX="14.0" layoutY="51.0" prefHeight="27.0" prefWidth="160.0" />
+                        <ComboBox fx:id="cb_course_status" layoutX="189.0" layoutY="51.0" prefHeight="27.0" prefWidth="161.0" />
+                        <Button layoutX="397.0" layoutY="14.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="98.0" text="Add Course" onAction="#addANewCourse" />
+                        <TableView fx:id="course_tableView" layoutX="14.0" layoutY="97.0" prefHeight="266.0" prefWidth="580.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="SLNo" />
-                            <TableColumn prefWidth="100.0" text="Course Code" />
-                              <TableColumn prefWidth="231.0" text="Course Title" />
-                              <TableColumn prefWidth="82.0" text="Status" />
-                              <TableColumn prefWidth="89.0" text="Actions" />
+                            <TableColumn fx:id="col_sl_no" prefWidth="75.0" text="SLNo" />
+                            <TableColumn fx:id="col_course_code" prefWidth="100.0" text="Course Code" />
+                              <TableColumn fx:id="col_course_title" prefWidth="231.0" text="Course Title" />
+                              <TableColumn fx:id="col_credit_hour" prefWidth="100.0" text="Credit Hour"/>
+                              <TableColumn fx:id="col_course_status" prefWidth="82.0" text="Status" />
+                              <TableColumn fx:id="col_course_action" prefWidth="89.0" text="Actions" />
                           </columns>
                         </TableView>
                      </children>
@@ -59,7 +60,7 @@
                   </AnchorPane>
             </content>
           </Tab>
-            <Tab text="Pre-Registation">
+            <Tab text="Pre-Registration">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>

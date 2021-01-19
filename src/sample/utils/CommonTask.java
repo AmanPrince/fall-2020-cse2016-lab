@@ -26,7 +26,7 @@ public class CommonTask {
 
     public void showMessage(Alert.AlertType type, String msg){
         Alert alert = new Alert(type);
-        alert.setTitle("Registration");
+        alert.setTitle("Pre Registration System");
         alert.setContentText(msg);
         alert.show();
     }
