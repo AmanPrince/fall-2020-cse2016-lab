@@ -24,7 +24,7 @@
                         <TextField fx:id="tf_course_title" layoutX="189.0" layoutY="14.0" promptText="Course Title" />
                         <ComboBox fx:id="cb_credit_hour" layoutX="14.0" layoutY="51.0" prefHeight="27.0" prefWidth="160.0" />
                         <ComboBox fx:id="cb_course_status" layoutX="189.0" layoutY="51.0" prefHeight="27.0" prefWidth="161.0" />
-                        <Button layoutX="397.0" layoutY="14.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="98.0" text="Add Course" onAction="#addANewCourse" />
+                        <Button fx:id="button_course_action" layoutX="397.0" layoutY="14.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="98.0" text="Add Course" onAction="#addANewCourse" />
                         <TableView fx:id="course_tableView" layoutX="14.0" layoutY="97.0" prefHeight="266.0" prefWidth="580.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0">
                           <columns>
                             <TableColumn fx:id="col_sl_no" prefWidth="75.0" text="SLNo" />

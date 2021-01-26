@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/models/Course.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controllers/CourseOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaLab-Fall2020-CSE2016/sample/controllers/HomeController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaLab-Fall2020-CSE2016/sample/controllers/HomeController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaLab-Fall2020-CSE2016/sample/controllers/HomeController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaLab-Fall2020-CSE2016/sample/controllers/HomeController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaLab-Fall2020-CSE2016/sample/controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaLab-Fall2020-CSE2016/sample/controllers/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/controllers/CourseOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controllers/CourseOperation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/fxmls/course.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/fxmls/course.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/fxmls/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/fxmls/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/utils/CommonTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/utils/CommonTask.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,17 +251,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -312,7 +301,9 @@
       <workItem from="1610379730594" duration="598000" />
       <workItem from="1610437723261" duration="2163000" />
       <workItem from="1610439926834" duration="2869000" />
-      <workItem from="1611043199328" duration="3837000" />
+      <workItem from="1611043199328" duration="4183000" />
+      <workItem from="1611424045123" duration="1360000" />
+      <workItem from="1611647100990" duration="3455000" />
     </task>
     <servers />
   </component>
@@ -381,6 +372,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
@@ -390,9 +382,39 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/sample/controllers/LoginController.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/sample/controllers/CourseOperation.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/controllers/CourseOperation.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/controllers/CourseOperation.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/controllers/HomeController.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/controllers/HomeController.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/controllers/HomeController.java</url>
+          <line>185</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/controllers/CourseOperation.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

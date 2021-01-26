@@ -79,12 +79,51 @@ public class CourseOperation {
     }
 
     public boolean updateCourse(Course course){
+        Connection connection = null;
+        try{
+            connection = dbConnection.openConnection();
 
+            String sql = "UPDATE course SET course_code=?,course_title=?,credit_hour=?,status=? WHERE id=?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+
+            statement.setString(1, course.getCourseCode());
+            statement.setString(2,course.getCourseTitle());
+            statement.setInt(3,course.getCourseCreditHour());
+            statement.setString(4,course.getCourseStatus());
+            statement.setInt(5,course.getId());
+
+            int updateResult = statement.executeUpdate();
+            if(updateResult>0){
+                return Boolean.TRUE;
+            }
+
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }finally {
+            if(connection!=null)
+                dbConnection.closeConnection(connection);
+        }
         return Boolean.FALSE;
     }
 
     public boolean deleteCourse(Course course){
+        Connection connection = null;
+        try{
+            connection = dbConnection.openConnection();
 
+            String sql = "DELETE FROM course WHERE id=?";
+
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setInt(1,course.getId());
+
+            return statement.executeUpdate()>0;
+
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }finally {
+            if(connection != null)
+                dbConnection.closeConnection(connection);
+        }
         return Boolean.FALSE;
     }
 }
